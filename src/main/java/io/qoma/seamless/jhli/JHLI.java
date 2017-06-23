@@ -276,17 +276,17 @@ public class JHLI {
 		attnam.synchString();
 		value.synchString();
 	}
-	public static void cfmgtatt_double(int []status, int dbkey, FAME_String objnam, int []atttyp, FAME_String attnam, double []value, int inlen, int []outlen){
+	public static void cfmgtatt(int []status, int dbkey, FAME_String objnam, int []atttyp, FAME_String attnam, double []value, int inlen, int []outlen){
 		CHLI.cfmgtatt_f(IntBuffer.wrap(status), dbkey, ByteBuffer.wrap(objnam.getBytes()), IntBuffer.wrap(atttyp), ByteBuffer.wrap(attnam.getBytes()), DoubleBuffer.wrap(value), inlen, IntBuffer.wrap(outlen));
 		objnam.synchString();
 		attnam.synchString();
 	}
-	public static void cfmgtatt_float(int []status, int dbkey, FAME_String objnam, int []atttyp, FAME_String attnam, float []value, int inlen, int []outlen){
+	public static void cfmgtatt(int []status, int dbkey, FAME_String objnam, int []atttyp, FAME_String attnam, float []value, int inlen, int []outlen){
 		CHLI.cfmgtatt_f(IntBuffer.wrap(status), dbkey, ByteBuffer.wrap(objnam.getBytes()), IntBuffer.wrap(atttyp), ByteBuffer.wrap(attnam.getBytes()), FloatBuffer.wrap(value), inlen, IntBuffer.wrap(outlen));
 		objnam.synchString();
 		attnam.synchString();
 	}
-	public static void cfmgtatt_int(int []status, int dbkey, FAME_String objnam, int []atttyp, FAME_String attnam, int []value, int inlen, int []outlen){
+	public static void cfmgtatt(int []status, int dbkey, FAME_String objnam, int []atttyp, FAME_String attnam, int []value, int inlen, int []outlen){
 		CHLI.cfmgtatt_f(IntBuffer.wrap(status), dbkey, ByteBuffer.wrap(objnam.getBytes()), IntBuffer.wrap(atttyp), ByteBuffer.wrap(attnam.getBytes()), IntBuffer.wrap(value), inlen, IntBuffer.wrap(outlen));
 		objnam.synchString();
 		attnam.synchString();
@@ -445,15 +445,15 @@ public class JHLI {
 	public static void cfmpodb(int []status, int dbkey){
 		CHLI.cfmpodb(IntBuffer.wrap(status), dbkey);
 	}
-	public static void cfmrdfa_double(int []status, int dbkey, FAME_String objnam, int wntobs, int []syear, int []sprd, int []gotobs, double []valary, int tmiss, double []mistt){
+	public static void cfmrdfa(int []status, int dbkey, FAME_String objnam, int wntobs, int []syear, int []sprd, int []gotobs, double []valary, int tmiss, double []mistt){
 		CHLI.cfmrdfa_f(IntBuffer.wrap(status), dbkey, ByteBuffer.wrap(objnam.getBytes()), wntobs, IntBuffer.wrap(syear), IntBuffer.wrap(sprd), IntBuffer.wrap(gotobs), DoubleBuffer.wrap(valary), tmiss, DoubleBuffer.wrap(mistt));
 		objnam.synchString();
 	}
-	public static void cfmrdfa_float(int []status, int dbkey, FAME_String objnam, int wntobs, int []syear, int []sprd, int []gotobs, float []valary, int tmiss, float []mistt){
+	public static void cfmrdfa(int []status, int dbkey, FAME_String objnam, int wntobs, int []syear, int []sprd, int []gotobs, float []valary, int tmiss, float []mistt){
 		CHLI.cfmrdfa_f(IntBuffer.wrap(status), dbkey, ByteBuffer.wrap(objnam.getBytes()), wntobs, IntBuffer.wrap(syear), IntBuffer.wrap(sprd), IntBuffer.wrap(gotobs), FloatBuffer.wrap(valary), tmiss, FloatBuffer.wrap(mistt));
 		objnam.synchString();
 	}
-	public static void cfmrdfa_int(int []status, int dbkey, FAME_String objnam, int wntobs, int []syear, int []sprd, int []gotobs, int []valary, int tmiss, int []mistt){
+	public static void cfmrdfa(int []status, int dbkey, FAME_String objnam, int wntobs, int []syear, int []sprd, int []gotobs, int []valary, int tmiss, int []mistt){
 		CHLI.cfmrdfa_f(IntBuffer.wrap(status), dbkey, ByteBuffer.wrap(objnam.getBytes()), wntobs, IntBuffer.wrap(syear), IntBuffer.wrap(sprd), IntBuffer.wrap(gotobs), IntBuffer.wrap(valary), tmiss, IntBuffer.wrap(mistt));
 		objnam.synchString();
 	}
@@ -473,15 +473,15 @@ public class JHLI {
 		srcnam.synchString();
 		tarnam.synchString();
 	}
-	public static void cfmrrng_double(int []status, int dbkey, FAME_String objnam, int []range_, double []valary, int tmiss, double []mistt){
+	public static void cfmrrng(int []status, int dbkey, FAME_String objnam, int []range_, double []valary, int tmiss, double []mistt){
 		CHLI.cfmrrng_f(IntBuffer.wrap(status), dbkey, ByteBuffer.wrap(objnam.getBytes()), IntBuffer.wrap(range_), DoubleBuffer.wrap(valary), tmiss, DoubleBuffer.wrap(mistt));
 		objnam.synchString();
 	}
-	public static void cfmrrng_float(int []status, int dbkey, FAME_String objnam, int []range_, float []valary, int tmiss, float []mistt){
+	public static void cfmrrng(int []status, int dbkey, FAME_String objnam, int []range_, float []valary, int tmiss, float []mistt){
 		CHLI.cfmrrng_f(IntBuffer.wrap(status), dbkey, ByteBuffer.wrap(objnam.getBytes()), IntBuffer.wrap(range_), FloatBuffer.wrap(valary), tmiss, FloatBuffer.wrap(mistt));
 		objnam.synchString();
 	}
-	public static void cfmrrng_int(int []status, int dbkey, FAME_String objnam, int []range_, int []valary, int tmiss, int []mistt){
+	public static void cfmrrng(int []status, int dbkey, FAME_String objnam, int []range_, int []valary, int tmiss, int []mistt){
 		CHLI.cfmrrng_f(IntBuffer.wrap(status), dbkey, ByteBuffer.wrap(objnam.getBytes()), IntBuffer.wrap(range_), IntBuffer.wrap(valary), tmiss, IntBuffer.wrap(mistt));
 		objnam.synchString();
 	}
@@ -504,17 +504,17 @@ public class JHLI {
 		attnam.synchString();
 		value.synchString();
 	}
-	public static void cfmsatt_double(int []status, int dbkey, FAME_String objnam, int atttyp, FAME_String attnam, double []value){
+	public static void cfmsatt(int []status, int dbkey, FAME_String objnam, int atttyp, FAME_String attnam, double []value){
 		CHLI.cfmsatt_f(IntBuffer.wrap(status), dbkey, ByteBuffer.wrap(objnam.getBytes()), atttyp, ByteBuffer.wrap(attnam.getBytes()), DoubleBuffer.wrap(value));
 		objnam.synchString();
 		attnam.synchString();
 	}
-	public static void cfmsatt_float(int []status, int dbkey, FAME_String objnam, int atttyp, FAME_String attnam, float []value){
+	public static void cfmsatt(int []status, int dbkey, FAME_String objnam, int atttyp, FAME_String attnam, float []value){
 		CHLI.cfmsatt_f(IntBuffer.wrap(status), dbkey, ByteBuffer.wrap(objnam.getBytes()), atttyp, ByteBuffer.wrap(attnam.getBytes()), FloatBuffer.wrap(value));
 		objnam.synchString();
 		attnam.synchString();
 	}
-	public static void cfmsatt_int(int []status, int dbkey, FAME_String objnam, int atttyp, FAME_String attnam, int []value){
+	public static void cfmsatt(int []status, int dbkey, FAME_String objnam, int atttyp, FAME_String attnam, int []value){
 		CHLI.cfmsatt_f(IntBuffer.wrap(status), dbkey, ByteBuffer.wrap(objnam.getBytes()), atttyp, ByteBuffer.wrap(attnam.getBytes()), IntBuffer.wrap(value));
 		objnam.synchString();
 		attnam.synchString();
@@ -598,27 +598,27 @@ public class JHLI {
 	public static void cfmwkdy(int []status, int freq, int date, int []wkdy){
 		CHLI.cfmwkdy(IntBuffer.wrap(status), freq, date, IntBuffer.wrap(wkdy));
 	}
-	public static void cfmwrmt_double(int []status, int dbkey, FAME_String objnam, int objtyp, int []range_, double []valary, int tmiss, double []mistt){
+	public static void cfmwrmt(int []status, int dbkey, FAME_String objnam, int objtyp, int []range_, double []valary, int tmiss, double []mistt){
 		CHLI.cfmwrmt_f(IntBuffer.wrap(status), dbkey, ByteBuffer.wrap(objnam.getBytes()), objtyp, IntBuffer.wrap(range_), DoubleBuffer.wrap(valary), tmiss, DoubleBuffer.wrap(mistt));
 		objnam.synchString();
 	}
-	public static void cfmwrmt_float(int []status, int dbkey, FAME_String objnam, int objtyp, int []range_, float []valary, int tmiss, float []mistt){
+	public static void cfmwrmt(int []status, int dbkey, FAME_String objnam, int objtyp, int []range_, float []valary, int tmiss, float []mistt){
 		CHLI.cfmwrmt_f(IntBuffer.wrap(status), dbkey, ByteBuffer.wrap(objnam.getBytes()), objtyp, IntBuffer.wrap(range_), FloatBuffer.wrap(valary), tmiss, FloatBuffer.wrap(mistt));
 		objnam.synchString();
 	}
-	public static void cfmwrmt_int(int []status, int dbkey, FAME_String objnam, int objtyp, int []range_, int []valary, int tmiss, int []mistt){
+	public static void cfmwrmt(int []status, int dbkey, FAME_String objnam, int objtyp, int []range_, int []valary, int tmiss, int []mistt){
 		CHLI.cfmwrmt_f(IntBuffer.wrap(status), dbkey, ByteBuffer.wrap(objnam.getBytes()), objtyp, IntBuffer.wrap(range_), IntBuffer.wrap(valary), tmiss, IntBuffer.wrap(mistt));
 		objnam.synchString();
 	}
-	public static void cfmwrng_double(int []status, int dbkey, FAME_String objnam, int []range_, double []valary, int tmiss, double []mistt){
+	public static void cfmwrng(int []status, int dbkey, FAME_String objnam, int []range_, double []valary, int tmiss, double []mistt){
 		CHLI.cfmwrng_f(IntBuffer.wrap(status), dbkey, ByteBuffer.wrap(objnam.getBytes()), IntBuffer.wrap(range_), DoubleBuffer.wrap(valary), tmiss, DoubleBuffer.wrap(mistt));
 		objnam.synchString();
 	}
-	public static void cfmwrng_float(int []status, int dbkey, FAME_String objnam, int []range_, float []valary, int tmiss, float []mistt){
+	public static void cfmwrng(int []status, int dbkey, FAME_String objnam, int []range_, float []valary, int tmiss, float []mistt){
 		CHLI.cfmwrng_f(IntBuffer.wrap(status), dbkey, ByteBuffer.wrap(objnam.getBytes()), IntBuffer.wrap(range_), FloatBuffer.wrap(valary), tmiss, FloatBuffer.wrap(mistt));
 		objnam.synchString();
 	}
-	public static void cfmwrng_int(int []status, int dbkey, FAME_String objnam, int []range_, int []valary, int tmiss, int []mistt){
+	public static void cfmwrng(int []status, int dbkey, FAME_String objnam, int []range_, int []valary, int tmiss, int []mistt){
 		CHLI.cfmwrng_f(IntBuffer.wrap(status), dbkey, ByteBuffer.wrap(objnam.getBytes()), IntBuffer.wrap(range_), IntBuffer.wrap(valary), tmiss, IntBuffer.wrap(mistt));
 		objnam.synchString();
 	}
