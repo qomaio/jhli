@@ -13,7 +13,6 @@ import com.sun.jna.ptr.PointerByReference;
 
 public class CHLI {
 	private static NativeLibrary chli;
-	static String IGNORE;
 
 	static {
 		String CHLI_LIBRARY = getCHLIfullPath();
@@ -25,10 +24,8 @@ public class CHLI {
 		String CHLI_LIBRARY = System.getenv().get("FAME");
 		if (Platform.isLinux()) {
 			CHLI_LIBRARY += "/hli/64/libchli.so";
-			IGNORE = "> /dev/null";
 		} else if (Platform.isWindows()) {
 			CHLI_LIBRARY += "/64/chli.dll";
-			IGNORE = "> /nul";
 		} else {
 			throw new RuntimeException("Unsupported platform.");
 		}
