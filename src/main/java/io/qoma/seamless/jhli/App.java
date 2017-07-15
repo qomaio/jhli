@@ -13,7 +13,7 @@ public class App {
 
 		// Initialize the C HLI
 		cfmini(status);
-		System.out.printf("cfmini(status) status = %d\n\n", status[0]);
+		System.out.printf("cfmini(status) status = %d\n", status[0]);
 		if (status[0] != HSUCC)
 			return;
 
