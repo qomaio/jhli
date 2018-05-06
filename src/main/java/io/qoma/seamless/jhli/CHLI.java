@@ -80,6 +80,7 @@ public class CHLI {
 
 	static native void cfmabrt(IntBuffer status, int connkey);
 	static native void cfmalob(IntBuffer status, int dbkey, ByteBuffer objnam, int class_, int freq, int type, int basis, int observ, int numobs, int numchr, float growth);
+	static native void cfmappl(IntBuffer status, ByteBuffer product);
 	static native void cfmasrt(IntBuffer status, int connkey, int assert_type, ByteBuffer assertion, int perspective, int grouping, IntBuffer dblist);
 	static native void cfmbwdy(IntBuffer status, int freq, int date, IntBuffer biwkdy);
 	static native void cfmchfr(IntBuffer status, int sfreq, int sdate, int select, int tfreq, IntBuffer tdate, int relate);
@@ -122,7 +123,10 @@ public class CHLI {
 	static native void cfmgtnl(IntBuffer status, int dbkey, ByteBuffer objnam, int index, ByteBuffer strval, int inlen, IntBuffer outlen);
 	static native void cfmgtstr(IntBuffer status, int dbkey, ByteBuffer objnam, IntBuffer range_, ByteBuffer strval, IntBuffer ismiss, int inlen, IntBuffer outlen);
 	static native void cfmidat(IntBuffer status, int freq, IntBuffer date, ByteBuffer datstr, ByteBuffer image, int fmonth, int flabel, int centry);
-	static native void cfmini(IntBuffer status);
+	static void cfmini(IntBuffer status) {
+		FAME_String product = new FAME_String("fame_prodq");
+		cfmappl(status,ByteBuffer.wrap(product.getBytes()));
+	}
 	static native void cfminwc(IntBuffer status, int dbkey, ByteBuffer wilnam);
 	static native void cfmisbm(IntBuffer status, int value, IntBuffer ismiss);
 	static native void cfmisdm(IntBuffer status, int value, IntBuffer ismiss);

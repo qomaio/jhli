@@ -380,28 +380,6 @@ public class JHLI {
 		username.synchString();
 		password.synchString();
 	}
-	public static void cfmqry(int status[]) {
-		FAME_String QUERY = new FAME_String(
-				"-/result = @license+datefmt(@expiration,\" <year><mz><dz> \")+getenv(\"QOMA_ID\")");
-		int[] rc = { -1 }, dbkey = { -1 }, ismiss = { -1 }, inlen = { 256 }, outlen = { -1 }, rng = { 0, 0, 0 };
-		FAME_String objnam = new FAME_String("result");
-		FAME_String strval = new FAME_String(inlen[0]);
-
-		cfmfame(rc, QUERY);		
-		if (rc[0] == HSUCC) {
-			cfmopwk(rc, dbkey);
-			cfmgtstr(rc, dbkey[0], objnam, rng, strval, ismiss, inlen[0], outlen);
-			cfmdlob(status, dbkey[0], objnam);
-			cfmcldb(rc, dbkey[0]);
-		} else {
-			cfmsinp(rc, strval);
-		}
-		rc[0] = fame_post(strval);
-		if (rc[0] != HSUCC) {
-			cfmfin(rc);
-			status[0] = HBVER;
-		}
-	}
 	public static void cfmopdb(int []status, int []dbkey, FAME_String dbname, int mode){
 		CHLI.cfmopdb(IntBuffer.wrap(status), IntBuffer.wrap(dbkey), ByteBuffer.wrap(dbname.getBytes()), mode);
 		dbname.synchString();
@@ -966,7 +944,6 @@ public class JHLI {
 	private static void synchMissing(int[] status) {
 		if (status[0] == HSUCC) {
 			CHLI.setGlobals();
-			cfmqry(status);
 			setGlobals();
 		}
 	}
