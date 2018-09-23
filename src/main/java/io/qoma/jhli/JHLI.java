@@ -1,4 +1,4 @@
-package io.qoma.seamless.jhli;
+package io.qoma.jhli;
 
 import java.nio.ByteBuffer;
 import java.nio.DoubleBuffer;
@@ -225,7 +225,7 @@ public class JHLI {
 		errtxt.synchString();
 	}
 	public static void cfmfin(int []status){
-		CHLI.cfmfin(IntBuffer.wrap(status));
+		QHLI.cfmfin(status);
 	}
 	public static void cfmgcid(int []status, int dbkey, int []connkey){
 		CHLI.cfmgcid(IntBuffer.wrap(status), dbkey, IntBuffer.wrap(connkey));
@@ -307,7 +307,7 @@ public class JHLI {
 		image.synchString();
 	}
 	public static void cfmini(int[] status) {
-		CHLI.cfmini(IntBuffer.wrap(status));
+		QHLI.cfmini(status);
 		synchMissing(status);
 	}
 	public static void cfminwc(int []status, int dbkey, FAME_String wilnam){
@@ -828,13 +828,6 @@ public class JHLI {
 		int rc = CHLI.fame_parse_frequency(IntBuffer.wrap(freq), ByteBuffer.wrap(frequency_spec.getBytes()));
 		frequency_spec.synchString();
 		return rc;
-	}
-	public static int fame_post(FAME_String strval) {
-		String[] title = strval.toString().split(" ");
-		if(title.length<3) return HINITD;
-		String[] subtitle = title[0].split(":");
-		String docString = String.format("#\t%s\t%s\t%s", subtitle[0], title[1], PROD_ID);
-		return fame_logger(title, docString);
 	}
 	public static int fame_quick_info(int dbkey, FAME_String oname, int []oclass, int []type, int []freq, long []findex, long []lindex){
 		int rc = CHLI.fame_quick_info(dbkey, ByteBuffer.wrap(oname.getBytes()), IntBuffer.wrap(oclass), IntBuffer.wrap(type), IntBuffer.wrap(freq), LongBuffer.wrap(findex), LongBuffer.wrap(lindex));

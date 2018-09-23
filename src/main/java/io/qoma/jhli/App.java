@@ -1,6 +1,6 @@
-package io.qoma.seamless.jhli;
+package io.qoma.jhli;
 
-import static io.qoma.seamless.jhli.JHLI.*;
+import static io.qoma.jhli.JHLI.*;
 
 /**
  * Hello world!

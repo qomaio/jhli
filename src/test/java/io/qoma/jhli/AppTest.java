@@ -1,4 +1,4 @@
-package io.qoma.seamless.jhli;
+package io.qoma.jhli;
 
 import junit.framework.Test;
 import junit.framework.TestCase;

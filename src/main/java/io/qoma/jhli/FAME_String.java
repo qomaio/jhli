@@ -1,4 +1,4 @@
-package io.qoma.seamless.jhli;
+package io.qoma.jhli;
 
 import java.nio.ByteBuffer;
 import java.nio.CharBuffer;
@@ -14,7 +14,7 @@ import java.nio.charset.CharsetEncoder;
 public class FAME_String {
 
 	public FAME_String() {
-		this(io.qoma.seamless.jhli.JHLI.HSMLEN);
+		this(io.qoma.jhli.JHLI.HSMLEN);
 	}
 	
 	public FAME_String(FAME_String _src){
