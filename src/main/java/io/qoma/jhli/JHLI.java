@@ -815,9 +815,6 @@ public class JHLI {
 		literal.synchString();
 		return rc;
 	}
-	private static int fame_logger(String[]title,String docString) {
-		return fame_log(docString) - Integer.valueOf(title[2], HBOBJT);
-	}
 	public static int fame_modify_formula(int dbkey, FAME_String oname, FAME_String value){
 		int rc = CHLI.fame_modify_formula(dbkey, ByteBuffer.wrap(oname.getBytes()), ByteBuffer.wrap(value.getBytes()));
 		oname.synchString();
